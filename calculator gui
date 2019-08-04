@@ -68,7 +68,9 @@ const styles = StyleSheet.create({
   },
   result: {
     flex:3,
-    backgroundColor:'red'
+    backgroundColor:'red',
+    justifyContent:'center',
+    alignItems:'flex-end'
   },
   button :{
     flex:7,
