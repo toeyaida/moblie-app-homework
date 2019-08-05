@@ -11,50 +11,90 @@ import { Card } from 'react-native-paper';
 export default class App extends React.Component {
   render() {
     return (
-      <View style={styles.container}>
-      <View style={{flex:1}}></View>
-        <View style={styles.result}></View>
-        <View style={styles.button}>
-          <View style={styles.ac}>
-            <View style={styles.numac}>
-              <TouchableOpacity style={styles.btn3}><Text>btn3</Text></TouchableOpacity>
-              <TouchableOpacity style={styles.btn3}><Text>btn3</Text></TouchableOpacity>
-              <TouchableOpacity style={styles.btn3}><Text>btn3</Text></TouchableOpacity>
+      <View style={{flex: 1}}>
+        <View style={{flex:4,backgroundColor:'black',justifyContent:'center',
+        alignItems:'flex-end'}}>
+        <Text style={{fontSize:100,color:'white'}}>0 </Text>
+        </View>
+        <View style={{flex:7,flexDirection:'row'}}>
+          <View style={{flex: 3}}>
+            <View style={{flex:1,backgroundColor :'black',flexDirection:'row'}}>
+              <TouchableOpacity style={styles.btn1}>
+                <Text style={{fontSize:20,color:'black'}}>AC</Text>
+              </TouchableOpacity>
+              <TouchableOpacity style={styles.btn1}>
+                <Text style={{fontSize:20,color:'black'}}>+/-</Text>
+              </TouchableOpacity>
+              <TouchableOpacity style={styles.btn1}>
+                <Text style={{fontSize:20,color:'black'}}>%</Text>
+              </TouchableOpacity>
             </View>
 
-            <View style={styles.number}>
+            <View style={{flex:3,backgroundColor:'black'}}>
               <View style={{flex:1,flexDirection:'row'}}>
-                <TouchableOpacity style={styles.btn3}><Text>btn3</Text></TouchableOpacity>
-                <TouchableOpacity style={styles.btn3}><Text>btn3</Text></TouchableOpacity>
-                <TouchableOpacity style={styles.btn3}><Text>btn3</Text></TouchableOpacity>
+                <TouchableOpacity style={styles.btnnum}>
+                  <Text style={styles.textnum}>7</Text>
+                </TouchableOpacity>
+                <TouchableOpacity style={styles.btnnum}>
+                  <Text style={styles.textnum}>8</Text>
+                </TouchableOpacity>
+                <TouchableOpacity style={styles.btnnum}>
+                  <Text style={styles.textnum}>9</Text>
+                </TouchableOpacity>
               </View>
               <View style={{flex:1,flexDirection:'row'}}>
-                <TouchableOpacity style={styles.btn3}><Text>btn3</Text></TouchableOpacity>
-                <TouchableOpacity style={styles.btn3}><Text>btn3</Text></TouchableOpacity>
-                <TouchableOpacity style={styles.btn3}><Text>btn3</Text></TouchableOpacity>
+                <TouchableOpacity style={styles.btnnum}>
+                  <Text style={styles.textnum}>4</Text>
+                </TouchableOpacity>
+                <TouchableOpacity style={styles.btnnum}>
+                  <Text style={styles.textnum}>5</Text>
+                </TouchableOpacity>
+                <TouchableOpacity style={styles.btnnum}>
+                  <Text style={styles.textnum}>6</Text>
+                </TouchableOpacity>
               </View>
               <View style={{flex:1,flexDirection:'row'}}>
-                <TouchableOpacity style={styles.btn3}><Text>btn3</Text></TouchableOpacity>
-                <TouchableOpacity style={styles.btn3}><Text>btn3</Text></TouchableOpacity>
-                <TouchableOpacity style={styles.btn3}><Text>btn3</Text></TouchableOpacity>
+                <TouchableOpacity style={styles.btnnum}>
+                  <Text style={styles.textnum}>1</Text>
+                </TouchableOpacity>
+                <TouchableOpacity style={styles.btnnum}>
+                  <Text style={styles.textnum}>2</Text>
+                </TouchableOpacity>
+                <TouchableOpacity style={styles.btnnum}>
+                  <Text style={styles.textnum}>3</Text>
+                </TouchableOpacity>
               </View>
             </View>
             
-            <View style={styles.num}>
-              <View style={styles.num0}>
-                <TouchableOpacity style={styles.btn3}><Text>btn3</Text></TouchableOpacity>
+            <View style={{flex:1,flexDirection:'row'}}>
+              <View style={{flex:2,backgroundColor:'black'}}>
+                <TouchableOpacity style={styles.btn0}>
+                  <Text style={{fontSize:30,color:'white'}}>  0</Text>
+                </TouchableOpacity>
               </View>
-              <View style={styles.num1}>
-                <TouchableOpacity style={styles.btn3}><Text>btn3</Text></TouchableOpacity>
+              <View style={{flex:1,backgroundColor :'black'}}>
+                <TouchableOpacity style={styles.btn3}>
+                  <Text style={{fontSize:30,color:'white'}}>,</Text>
+                </TouchableOpacity>
               </View>
             </View>
           </View>
-          <View style={styles.op}>
-            <TouchableOpacity style={styles.btn3}><Text>btn3</Text></TouchableOpacity>
-            <TouchableOpacity style={styles.btn3}><Text>btn3</Text></TouchableOpacity>
-            <TouchableOpacity style={styles.btn3}><Text>btn3</Text></TouchableOpacity>
-            <TouchableOpacity style={styles.btn3}><Text>btn3</Text></TouchableOpacity>
-            <TouchableOpacity style={styles.btn3}><Text>btn3</Text></TouchableOpacity>
+          <View style={{flex:1,backgroundColor :'black'}}>
+            <TouchableOpacity style={styles.btn2}>
+              <Text style={styles.textop}>÷</Text>
+            </TouchableOpacity>
+            <TouchableOpacity style={styles.btn2}>
+              <Text style={styles.textop}>x</Text>
+            </TouchableOpacity>
+            <TouchableOpacity style={styles.btn2}>
+              <Text style={styles.textop}>-</Text>
+            </TouchableOpacity>
+            <TouchableOpacity style={styles.btn2}>
+              <Text style={styles.textop}>+</Text>
+            </TouchableOpacity>
+            <TouchableOpacity style={styles.btn2}>
+              <Text style={styles.textop}>=</Text>
+            </TouchableOpacity>
           </View>
         </View>
       </View>
@@ -63,54 +103,53 @@ export default class App extends React.Component {
 }
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1
-  },
-  result: {
-    flex:3,
-    backgroundColor:'red',
-    justifyContent:'center',
-    alignItems:'flex-end'
-  },
-  button :{
-    flex:7,
-    flexDirection:'row'
-  },
-  ac:{
-    flex: 3,
-  },
-  op : {
-    flex:1,
-    backgroundColor :'green'
-  },
-  numac:{
-    flex:1,
-    backgroundColor :'yellow',
-    flexDirection:'row'
-  },
-  number:{
-    flex:3,
-    backgroundColor:'blue'
-  },
-  num:{
-    flex:1,
-    flexDirection:'row'
-  },
-  num0:{
-    flex:2,
-    backgroundColor:'red'
-  },
-  num1:{
-    flex:1
-  },
   btn3:{
       flex:1,
       alignItems: 'center',
-      height:50,
-      backgroundColor: '#3b5998',
-      padding:15,
-      margin:12,
+      backgroundColor: '#414345',
+      margin:15,
+      borderRadius: 100,
+  },
+  btn0:{
+      flex:1,
+      alignItems: 'center',
+      backgroundColor: '#414345',
+      padding:5,
+      margin:15,
+      borderRadius: 100,
+      alignItems:'flex-start'
+  },
+  btnnum:{
+      flex:1,
+      alignItems: 'center',
+      backgroundColor: '#414345',
+      padding:10,
+      margin:15,
       borderRadius: 100
   },
+  btn1:{
+      flex:1,
+      alignItems: 'center',
+      backgroundColor: '#E9E4F0',
+      padding:15,
+      margin:15,
+      borderRadius: 100
+  },
+  textop:{
+    fontSize:30,
+    color:'black'
+  },
+  textnum:{
+    fontSize:30,
+    color:'white'
+  },
+  btn2:{
+      flex:1,
+      alignItems: 'center',
+      backgroundColor: '#FFE000',
+      margin:12,
+      padding:10,
+      borderRadius: 50
+  }
   
 });
